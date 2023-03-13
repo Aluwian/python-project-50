@@ -1,5 +1,6 @@
 import json
 import os
+import re
 
 
 def generate_diff(path_data_1, path_data_2):
@@ -19,4 +20,4 @@ def generate_diff(path_data_1, path_data_2):
         else:
             answer["- " + key] = data_1[key]
             answer["+ " + key] = data_2[key]
-    return json.dumps(answer, indent=4).replace('"', '')
+    return re.sub('"|,', "", json.dumps(answer, indent=2))
