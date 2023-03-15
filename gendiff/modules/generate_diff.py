@@ -1,13 +1,11 @@
 import json
-import os
 import re
+from gendiff.modules.parser import get_file
 
 
-def generate_diff(path_data_1, path_data_2):
-    path_1 = os.path.abspath(path_data_1)
-    path_2 = os.path.abspath(path_data_2)
-    data_1 = json.load(open(path_1))
-    data_2 = json.load(open(path_2))
+def generate_diff(path_1, path_2):
+    (data_1, form) = get_file(path_1)
+    (data_2, form) = get_file(path_2)
     keys = sorted(data_1.keys() | data_2.keys())
     answer = {}
     for key in keys:
