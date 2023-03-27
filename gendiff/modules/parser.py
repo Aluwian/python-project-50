@@ -5,9 +5,9 @@ import os
 
 def parse(file, format_name):
     if format_name == 'JSON':
-        return json.load(file), format_name
+        return json.load(file)
     elif format_name == 'YAML':
-        return yaml.safe_load(file), format_name
+        return yaml.safe_load(file)
 
 
 def get_file(path):
