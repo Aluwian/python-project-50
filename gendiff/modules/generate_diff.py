@@ -1,5 +1,3 @@
-import json
-import re
 from gendiff.modules.parser import get_file
 from gendiff.modules.make_tree import make_tree
 from gendiff.modules.stylish import get_format
