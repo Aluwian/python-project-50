@@ -1,0 +1,7 @@
+{
+    hello: world
+    is: True
+    nested: {
+        count: 5
+    }
+}
