@@ -13,3 +13,6 @@
 Команда: gendiff  
 Обязательно указать пути к файлам  
 [Демонстрация](https://asciinema.org/a/Q9K6eHP1fRiS3eNJJu9J8JiBI)
+
+#### 3. Демонстрация работы стандартного форматтера на примере двух вложенных JSON и YAML файлов
+[Демонстрация](https://asciinema.org/a/WGccDp0f0cGFzBwOqb4XrYbbN)
