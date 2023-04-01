@@ -9,10 +9,12 @@
 Команда: gendiff -h  
 [Демонстрация](https://asciinema.org/a/6VpFMahf5TnUn69d4kSG5LTsX)
 
-#### 2.  Сравнение двух Json-файлов  
-Команда: gendiff  
-Обязательно указать пути к файлам  
-[Демонстрация](https://asciinema.org/a/Q9K6eHP1fRiS3eNJJu9J8JiBI)
+#### 2.  Вывод данных с использвоанием стандартного 'stylish' форматера.
+На вход берутся два JSON и YAML файла, имеющих как плоскуюструктуру, так и структуру с вложенными данными.
+Вызов: gendiff path1 path2  
+[Демонстрация](https://asciinema.org/a/GB3IeVYTVH18wy7YUThEr5NlD)
 
-#### 3. Демонстрация работы стандартного форматтера на примере двух вложенных JSON и YAML файлов
-[Демонстрация](https://asciinema.org/a/WGccDp0f0cGFzBwOqb4XrYbbN)
+#### 3. Вывод данных с использвоанием 'plain' форматера.
+На вход берутся два JSON и YAML файла, имеющих как плоскуюструктуру, так и структуру с вложенными данными.
+Вызов: gendiff -f plain path1 path2  
+[Демонстрация](https://asciinema.org/a/cr8KH7XkgLTcINWbajxTjC2Q4)
