@@ -39,7 +39,7 @@ def truncate(value):
     return " "
 
 
-def get_format(data):
+def get_stylish_format(data):
     def format_line(array, depth=0):
         lines = []
         for item in array:

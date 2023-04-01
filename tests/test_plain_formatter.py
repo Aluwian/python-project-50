@@ -1,6 +1,6 @@
 import os
 import json
-from gendiff.formatters.stylish import get_stylish_format
+from gendiff.formatters.plain import get_plain_format
 
 
 def get_fixture_path(file_name):
@@ -14,13 +14,15 @@ def read(file_path):
     return result
 
 
-def test_plain_stylish():
+def test_plain_format():
     tree = json.load(open(get_fixture_path("fixtures/plain_tree.json")))
-    result = read(get_fixture_path("fixtures/plain_result.txt"))
-    assert get_stylish_format(tree) == result
+    result = read(get_fixture_path("fixtures/plain_formatter_plain_result.txt"))
+    assert get_plain_format(tree) == result
 
 
-def test_nested_stylish():
+def test_nested_format():
     tree = json.load(open(get_fixture_path("fixtures/nested_tree.json")))
-    result = read(get_fixture_path("fixtures/nested_result.txt"))
-    assert get_stylish_format(tree) == result
+    result = read(
+        get_fixture_path("fixtures/plain_formatter_nested_result.txt")
+    )
+    assert get_plain_format(tree) == result
