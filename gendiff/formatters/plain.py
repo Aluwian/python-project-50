@@ -1,5 +1,5 @@
 def get_plain_format(data):
-    return "\n".join(make_plain(data))
+    return "\n".join(filter(lambda x: x is not None, make_plain(data)))
 
 
 def make_plain(tree, parent_name=""):
@@ -8,22 +8,24 @@ def make_plain(tree, parent_name=""):
         key = item.get("name")
         if parent_name != "":
             key = f"{parent_name}.{key}"
-        value = format_value(item.get("value"))
-        value_1 = format_value(item.get("value_1"))
-        value_2 = format_value(item.get("value_2"))
         children = item.get("children")
-        object_type = item.get("type")
         if children:
             result.extend(make_plain(children, key))
-        elif object_type == "deleted":
-            result.append(f"Property '{key}' was removed")
-        elif object_type == "added":
-            result.append(f"Property '{key}' was added with value: {value}")
-        elif object_type == "update":
-            result.append(
-                f"Property '{key}' was updated. From {value_1} to {value_2}"
-            )
+        result.append(format_changes(item, key))
     return result
+
+
+def format_changes(dictionary, key):
+    value = format_value(dictionary.get("value"))
+    value_1 = format_value(dictionary.get("value_1"))
+    value_2 = format_value(dictionary.get("value_2"))
+    object_type = dictionary.get("type")
+    if object_type == "deleted":
+        return f"Property '{key}' was removed"
+    elif object_type == "added":
+        return f"Property '{key}' was added with value: {value}"
+    elif object_type == "update":
+        return f"Property '{key}' was updated. From {value_1} to {value_2}"
 
 
 def format_value(value):
