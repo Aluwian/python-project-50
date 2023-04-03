@@ -18,3 +18,9 @@
 На вход берутся два JSON и YAML файла, имеющих как плоскуюструктуру, так и структуру с вложенными данными.
 Вызов: gendiff -f plain path1 path2  
 [Демонстрация](https://asciinema.org/a/cr8KH7XkgLTcINWbajxTjC2Q4)
+
+#### 3. Вывод данных с использованием 'json' форматера.
+На вход берутся два JSON и YAML файла, имеющих как плоскуюструктуру, так и структуру с вложенными данными.
+Вызов: gendiff -f json path1 path2  
+[Демонстрация](https://asciinema.org/a/gS8oKSxWJ2c0K5YHlUfLwPGc6)
+
