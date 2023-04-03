@@ -33,12 +33,6 @@ def format_value(value, level):
     return str(value)
 
 
-def truncate(value):
-    if value == "":
-        return ""
-    return " "
-
-
 def format_changes(dictionary, level):
     key = dictionary.get("name")
     object_type = dictionary.get("type")
@@ -48,23 +42,22 @@ def format_changes(dictionary, level):
     if object_type == "deleted":
         return (
             f"{get_indent(level) + BASE_SPACE * LEFT_OFFSET}- "
-            f"{key}:{truncate(value)}{value}"
+            f"{key}: {value}"
         )
     elif object_type == "added":
         return (
             f"{get_indent(level) + BASE_SPACE * LEFT_OFFSET}+ "
-            f"{key}:{truncate(value)}{value}"
+            f"{key}: {value}"
         )
     elif object_type == "update":
         return (
             f"{get_indent(level) + BASE_SPACE * LEFT_OFFSET}- "
-            f"{key}:{truncate(value_1)}{value_1}\n"
+            f"{key}: {value_1}\n"
             f"{get_indent(level) + BASE_SPACE * LEFT_OFFSET}+ "
-            f"{key}:{truncate(value_2)}{value_2}"
+            f"{key}: {value_2}"
         )
     return (
-        f"{get_indent(level) + BASE_SPACE * BASE_SPACE_COUNT}"
-        f"{key}:{truncate(value)}{value}"
+        f"{get_indent(level) + BASE_SPACE * BASE_SPACE_COUNT}" f"{key}: {value}"
     )
 
 
