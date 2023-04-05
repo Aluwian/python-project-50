@@ -13,10 +13,8 @@ def stringify(value, level=0):
     if type(value) is not dict:
         return str(value)
     lines = map(
-        lambda item: get_indent(level + 1)
-        + str(item[0])
-        + ": "
-        + stringify(item[1], level + 1),
+        lambda item: f"{get_indent(level + 1)}{str(item[0])}: "
+        f"{stringify(item[1], level + 1)}",
         value.items(),
     )
     result = itertools.chain("{", lines, [get_indent(level) + "}"])
