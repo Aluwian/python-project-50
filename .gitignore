@@ -5,3 +5,4 @@ dist/
 tests/__pycache__/
 .pytest_cahe/
 .coverage
+coverage.xml 
