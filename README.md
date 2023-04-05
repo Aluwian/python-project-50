@@ -6,21 +6,20 @@
 
 
 #### 1. Вызов справки  
-Команда: gendiff -h  
-[Демонстрация](https://asciinema.org/a/6VpFMahf5TnUn69d4kSG5LTsX)
+Команда: `gendiff -h`  
+[![asciicast](https://asciinema.org/a/k2PaF99h5j9QxXGUBZSx47eAb.svg)](https://asciinema.org/a/k2PaF99h5j9QxXGUBZSx47eAb)
 
-#### 2.  Вывод данных с использованием стандартного 'stylish' форматера.
-На вход берутся два JSON и YAML файла, имеющих как плоскую структуру, так и структуру с вложенными данными.
-Вызов: gendiff path1 path2  
-[Демонстрация](https://asciinema.org/a/GB3IeVYTVH18wy7YUThEr5NlD)
+#### 2.  Вывод данных с использованием стандартного 'stylish' форматера.  
+На вход берутся два JSON и YAML файла, имеющих как плоскую структуру, так и структуру с вложенными данными.  
+Вызов: `gendiff path1 path2`    
+[![asciicast](https://asciinema.org/a/1L06uJBZ5ER13cDWBZhO77uRS.svg)](https://asciinema.org/a/1L06uJBZ5ER13cDWBZhO77uRS)
 
 #### 3. Вывод данных с использованием 'plain' форматера.
-На вход берутся два JSON и YAML файла, имеющих как плоскую структуру, так и структуру с вложенными данными.
-Вызов: gendiff -f plain path1 path2  
-[Демонстрация](https://asciinema.org/a/cr8KH7XkgLTcINWbajxTjC2Q4)
+На вход берутся два JSON и YAML файла, имеющих как плоскую структуру, так и структуру с вложенными данными.  
+Вызов: `gendiff -f plain path1 path2`     
+[![asciicast](https://asciinema.org/a/1orSl5JLsI0UV38m7OGuEmXS4.svg)](https://asciinema.org/a/1orSl5JLsI0UV38m7OGuEmXS4)
 
 #### 3. Вывод данных с использованием 'json' форматера.
-На вход берутся два JSON и YAML файла, имеющих как плоскую структуру, так и структуру с вложенными данными.
-Вызов: gendiff -f json path1 path2  
-[Демонстрация](https://asciinema.org/a/gS8oKSxWJ2c0K5YHlUfLwPGc6)
-
+На вход берутся два JSON и YAML файла, имеющих как плоскую структуру, так и структуру с вложенными данными.  
+Вызов: `gendiff -f json path1 path2`    
+[![asciicast](https://asciinema.org/a/82iU29BkTSBDr1H1IWTDnqbp4.svg)](https://asciinema.org/a/82iU29BkTSBDr1H1IWTDnqbp4)
