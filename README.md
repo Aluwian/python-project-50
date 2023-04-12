@@ -7,19 +7,19 @@
 
 #### 1. Вызов справки  
 Команда: `gendiff -h`  
-[![asciicast](https://asciinema.org/a/k2PaF99h5j9QxXGUBZSx47eAb.svg)](https://asciinema.org/a/k2PaF99h5j9QxXGUBZSx47eAb)
+[![asciicast](https://asciinema.org/a/Fv0M8g68vdzhl62M8TMPD6ZXY.svg)](https://asciinema.org/a/Fv0M8g68vdzhl62M8TMPD6ZXY)
 
 #### 2.  Вывод данных с использованием стандартного 'stylish' форматера.  
 На вход берутся два JSON и YAML файла, имеющих как плоскую структуру, так и структуру с вложенными данными.  
 Вызов: `gendiff path1 path2`    
-[![asciicast](https://asciinema.org/a/1L06uJBZ5ER13cDWBZhO77uRS.svg)](https://asciinema.org/a/1L06uJBZ5ER13cDWBZhO77uRS)
+[![asciicast](https://asciinema.org/a/UWGZkIY6SW0Rt5912GgLgHA7s.svg)](https://asciinema.org/a/UWGZkIY6SW0Rt5912GgLgHA7s)
 
 #### 3. Вывод данных с использованием 'plain' форматера.
 На вход берутся два JSON и YAML файла, имеющих как плоскую структуру, так и структуру с вложенными данными.  
 Вызов: `gendiff -f plain path1 path2`     
-[![asciicast](https://asciinema.org/a/1orSl5JLsI0UV38m7OGuEmXS4.svg)](https://asciinema.org/a/1orSl5JLsI0UV38m7OGuEmXS4)
+[![asciicast](https://asciinema.org/a/sSygjjLuWW30EqCb3PN8LSh3f.svg)](https://asciinema.org/a/sSygjjLuWW30EqCb3PN8LSh3f)
 
 #### 3. Вывод данных с использованием 'json' форматера.
 На вход берутся два JSON и YAML файла, имеющих как плоскую структуру, так и структуру с вложенными данными.  
 Вызов: `gendiff -f json path1 path2`    
-[![asciicast](https://asciinema.org/a/82iU29BkTSBDr1H1IWTDnqbp4.svg)](https://asciinema.org/a/82iU29BkTSBDr1H1IWTDnqbp4)
+[![asciicast](https://asciinema.org/a/WJQd72BgyYVEvOMcoYZaHkXOZ.svg)](https://asciinema.org/a/WJQd72BgyYVEvOMcoYZaHkXOZ)
