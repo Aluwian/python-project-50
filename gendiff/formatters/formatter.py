@@ -5,7 +5,7 @@ from gendiff.formatters.json_format import get_json_format
 
 def get_formatter(name):
     match name:
-        case "stylish":
+        case "" | "stylish":
             return get_stylish_format
         case "plain":
             return get_plain_format

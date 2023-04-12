@@ -6,7 +6,7 @@ from gendiff.formatters.stylish import get_stylish_format
 from gendiff.formatters.plain import get_plain_format
 from gendiff.formatters.json_format import get_json_format
 from gendiff.formatters.stylish import stringify
-
+from gendiff.formatters.formatter import get_formatter
 
 plain_tree = json.load(open(get_fixture_path("fixtures/plain_tree.json")))
 nested_tree = json.load(open(get_fixture_path("fixtures/nested_tree.json")))
@@ -80,3 +80,25 @@ def test_json_format(test_input, expected):
 )
 def test_stringify(test_input, expected):
     assert stringify(test_input) == expected
+
+
+@pytest.mark.parametrize(
+    "test_name, expected",
+    [
+        ("", get_stylish_format),
+        ("stylish", get_stylish_format),
+        ("plain", get_plain_format),
+        ("json", get_json_format),
+    ],
+)
+def test_get_formatter(test_name, expected):
+    assert get_formatter(test_name) == expected
+
+
+def test_error():
+    with pytest.raises(ValueError) as text:
+        get_formatter("invalid")
+    assert (
+        str(text.value)
+        == "Unknown format invalid. Use supported formats: stylish, plant, json"
+    )
